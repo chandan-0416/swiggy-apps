@@ -11,8 +11,11 @@
 
   "repository": {
     "type": "git",
-    "url": "https://github.com/chandan-0416/Foodie.io"
+    "url": "https://github.com/chandan-0416/swiggy-apps.git"
   },
+  
+   "homepage": "https://github.com/chandan-0416/swiggy-apps",
+
   "keywords": [
     "react",
     "food-delivery-app"
@@ -52,4 +55,5 @@
   "browserslist": [
     "last 2 versions"
   ]
+  
 }
