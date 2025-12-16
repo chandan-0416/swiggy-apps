@@ -97,7 +97,8 @@ const RestaurantMenu = () => {
       {/* If you want to show menu unavailable message */}
       {categories.length === 0 && (
         <p className="text-gray-500 mt-4">
-          Menu is not available in mock JSON.
+          Menu is not available in mock JSON. 
+          previously, I Integrated with Swiggy's API ( for learning purpose)!
         </p>
       )}
 
