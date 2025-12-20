@@ -12,7 +12,7 @@ const Header=()=>{
   // subscribing to the store using a selector
    const cartItems = useSelector((store) => store.cart.items);
    return(
-        <div className="flex items-center justify-between bg-gradient-to-r from-pink-100 via-yellow-50 to-green-50 shadow-lg p-6 mx-auto max-w-screen-xl">
+        <div className="flex items-center justify-between bg-gradient-to-r from-pink-100 via-yellow-50 to-green-50 shadow-lg p-6 mx-auto">
         <div className="flex items-center">
             <img className="w-32 " src={LOGO_URL}/>
         </div>

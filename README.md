@@ -65,7 +65,7 @@ Testing: Manual, unit and integration using Jest and jsdom environment.
 3.if dependency array is [btnNameReact] => called everytime btnNameReact is updated
 
 # 2-types of routing in web Apps
--Client Side Routing
+-Client Side Routing 
 -Server Side Routing 
 
 # Components
