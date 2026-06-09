@@ -5,12 +5,14 @@ import Body from "./components/Body";
 import  {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
-import RestaurantMenu from "./components/RestaurantMenu";
+
 import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
 import { Toaster } from "react-hot-toast";
+import RestaurantMenu from "./components/RestaurantMenu";
+
 
 //lazy Loading or Chunking or Code Splitting 
 const About = lazy(()=> import("./components/About"));

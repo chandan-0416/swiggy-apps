@@ -1,4 +1,4 @@
-# Online Food Delivery App ie "Foodie.app"
+# Online Food Delivery App
 I’ve been enhancing my skills and solidifying my foundation in the React.js
 Tech stack by diving deep into it’s concepts and techniques while embracing
 project "online Food Delivery App" based learning.
