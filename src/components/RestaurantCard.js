@@ -2,13 +2,7 @@ import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard =(props)=>{
     const {resData}=props;
-    const { // destructure data
-        cloudinaryImageId, 
-        name, 
-        avgRating, 
-        cuisines, 
-        sla, 
-     }= resData?.info; // optional chaining
+    const {cloudinaryImageId, name, avgRating, cuisines, sla}= resData?.info;
     return(
         <div 
         data-testid="resCard"

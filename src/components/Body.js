@@ -115,7 +115,6 @@ import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import mockData from "./mocks/mockResListData.json";
 const Body = () => {
@@ -138,17 +137,6 @@ const Body = () => {
     setlistOfRestaurant(restaurants);
     setFilteredRestaurant(restaurants);
   };
-  const onlineStatus = useOnlineStatus();
-
-  if (onlineStatus == false)
-    return (
-      <h1>
-        Looks like you're offline!! Please check your internet connection !
-      </h1>
-    );
-
-  const { loggedInUser, setUserName } = useContext(UserContext);
-
   //conditional Rendering
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
@@ -191,14 +179,6 @@ const Body = () => {
           >
             Top Rated Restaurants
           </button>
-        </div>
-        <div className="search m-4 p-4 flex items-center">
-          <label className="mr-2">Username : </label>
-          <input
-            className="border border-gray-300 rounded-lg px-4 py-2"
-            value={loggedInUser}
-            onChange={(e) => setUserName(e.target.value)}
-          />
         </div>
       </div>
 

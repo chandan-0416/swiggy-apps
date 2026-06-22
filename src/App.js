@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import  {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
-import Contact from "./components/Contact";
+
 import Error from "./components/Error";
 
 import UserContext from "./utils/UserContext";
@@ -15,7 +15,6 @@ import RestaurantMenu from "./components/RestaurantMenu";
 
 
 //lazy Loading or Chunking or Code Splitting 
-const About = lazy(()=> import("./components/About"));
 const AppLayout=()=>{
    const [userName, setUserName] =useState();
    
@@ -28,7 +27,7 @@ const AppLayout=()=>{
     },[]);
     return(
         <Provider store={appStore}>
-        <UserContext.Provider value={{loggedInUser: userName, setUserName}}>
+        <UserContext.Provider>
           <div className="app">
          <Header/>
          <Outlet/>
@@ -47,16 +46,6 @@ const appRouter = createBrowserRouter([
                 path: "/",
                 element: <Body/>
             },
-            {
-                path: "/about",
-               element: <Suspense fallback={<h1>Loading....</h1>}>
-                               <About/>
-                             </Suspense>,
-            }, 
-            {
-                path: "/contact",
-                element: <Contact/>,
-            }, 
             {
                 path: "/restaurants/:resId",
                 element: <RestaurantMenu/>,
